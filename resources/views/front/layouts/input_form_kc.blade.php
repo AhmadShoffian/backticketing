@@ -17,7 +17,8 @@
 		<link rel="stylesheet" href="{{ asset('front/assets/css/tiny-slider.css') }}">
 		<link rel="stylesheet" href="{{ asset('front/assets/css/glightbox.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}">
-    </head>
+        <!-- Select2 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">        </head>
     <body>
        <!-- ========================= header start ========================= -->
        <header class="header navbar-area bg-white">
@@ -97,8 +98,8 @@
                           <input type="email" id="email" class="required" placeholder="Masukkan Email">
 
                           <label for="role" class="mt-4">Unit Kerja</label><span class="required"></span>
-                          <select id="role" class="form-select required">
-                              <option value="">Pilih Unit Kerja</option>
+                          <select id="role" name="role"  class="form-select" required>
+                              {{-- <option value="">Pilih Unit Kerja</option> --}}
                               <option value="1">Biro Perencanaan, Keuangan, dan Umum</option>
                               <option value="2">Biro Akademik, Kemahasiswaan, dan Kerja Sama</option>
                               <option value="3">Fakultas Seni Pertunjukan</option>
@@ -129,7 +130,7 @@
                             <input type="text" id="phone" class="required" placeholder="Masukkan No. Telepon">
 
                             <label for="unit" class="mt-4">Peran</label><span class="required"></span>
-                            <select id="unit" name="unit" class="form-select required">
+                            <select id="unit" name="unit" class="form-select" required>
                                 <option value="">Pilih Peran</option>
                                 @foreach($peran as $unit)
                                     <option value="{{ $unit->id }}">{{ $unit->name }}</option>
@@ -139,12 +140,13 @@
                             
 
                             <label for="category" class="mt-4">Kategori</label><span class="required"></span>
-                            <select id="category" name="category" class="form-select required" onchange="checkCategory()">
+                            <select id="category" name="category" class="form-select" required onchange="checkCategory()">
                                 <option value="">Pilih Kategori</option>
                                 @foreach($kategori as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
+                            
 
                             <label for="subcategory" class="mt-4">Sub Kategori</label><span class="required"></span>
                             <select id="subcategory" class="form-select required">
@@ -291,6 +293,12 @@
                 <script src="{{ asset('front/assets/js/main.js') }}"></script>
                 <script src="{{ asset('front/assets/js/input_form.js') }}"></script>
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <!-- jQuery -->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+                
+                
+
                 <script>
                     document.getElementById("swal-6").addEventListener("click", function () {
                         Swal.fire({

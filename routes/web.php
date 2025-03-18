@@ -33,14 +33,14 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 
 
-Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+// Route::get('/dashboard', [DashboardController::class, 'index'])
+//     ->middleware(['auth', 'verified'])
+//     ->name('dashboard');
 
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
-// Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/kategori', [TopicController::class, 'index'])->name('topic.index');
 Route::get('/kategori/tambah', [TopicController::class, 'tambah'])->name('topic.tambah');
@@ -100,6 +100,7 @@ Route::get('/sub-menu/delete/{id}', [SubMenuController::class, 'delete'])->name(
 
 
 Route::get('/unit_kerja', [UnitKerjaController::class, 'index'])->name('unit_kerja.index');
+Route::get('/unit_kerja/add', [UnitKerjaController::class, 'add'])->name('unit_kerja.add');
 
 
 Route::middleware('auth')->group(function () {
