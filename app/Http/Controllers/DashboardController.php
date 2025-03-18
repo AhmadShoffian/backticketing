@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -12,7 +13,8 @@ class DashboardController extends Controller
     public function index()
     {
         // return view('layouts.default');
-        return view('back.dashboard');
+        $menu_master = Menu::all(); 
+        return view('back.dashboard', compact('menu_master'));
     }
 
     /**

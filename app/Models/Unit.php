@@ -9,4 +9,9 @@ class Unit extends Model
 {
     use HasFactory;
     protected $table = 'master_units';
+
+    public function unitKerja()
+    {
+        return $this->belongsTo(UnitKerja::class, 'unit_kerja_id', 'id');
+    }
 }

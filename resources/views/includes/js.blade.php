@@ -21,6 +21,8 @@
   <script src="{{ asset('back/modules/jquery-ui/jquery-ui.min.js') }}"></script>
   <script src="{{ asset('back/js/page/modules-datatables.js') }}"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
   <!-- Page Specific JS File -->
   <script src="{{ ('back/js/page/index-0.js') }}"></script>

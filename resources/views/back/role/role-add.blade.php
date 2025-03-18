@@ -15,7 +15,7 @@
 					<div class="container">
 						<div class="form-group">
 							<div class="input-group mb-3">
-								<label for="inputText" class="col-sm-12 col-form-label">Role</label>
+								<label for="inputText" class="col-sm-12 col-form-label">Username</label>
 								<input type="text" class="form-control" placeholder="" aria-label="">
 							</div>      
 
@@ -23,20 +23,20 @@
 								<div class="row mb-4">
 									<label style="display: block; margin-bottom: 20px;" for="inputText" class="col-sm-12 col-form-label"><b>Permission</b></label>
 									@foreach($getPermission as $value)
-											<div class="mb-2 col-md-2">
-												{{ $value['name'] }}
+										<div class="mb-2 col-md-2">
+											{{ $value['name'] }}
+										</div>
+										<div class=" mb-3 col-md-10">
+											<div class="row">
+												@foreach ($value['group'] as $group)
+													<div class="col-md-2">
+														<label><input type="checkbox" name="permission_id[]"> {{ $group['name'] }}</label>
+													</div>
+												@endforeach
 											</div>
-											<div class=" mb-3 col-md-10">
-												<div class="row">
-													@foreach ($value['group'] as $group)
-														<div class="col-md-2">
-															<label><input type="checkbox" name="permission_id[]"> {{ $group['name'] }}</label>
-														</div>
-													@endforeach
-												</div>
-												<hr>
-											</div>
-										@endforeach
+											<hr>
+										</div>
+									@endforeach
 								</div>      
 								<button type="submit" class="btn btn-primary">Simpan</button>
 							</form>

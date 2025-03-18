@@ -10,6 +10,8 @@ class Type extends Model
 {
     use HasFactory;
     protected $table = 'master_topic_type';
+    protected $fillable = ['name', 'topic_id'];
+    
 
     public function topic(): BelongsTo
     {

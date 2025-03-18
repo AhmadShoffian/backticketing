@@ -64,7 +64,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 py-5 py-xl-5 py-xxl-7">
-              <h1 class="display-3 text-1000 fw-normal">Let’s make a tour</h1>
+              <h1 class="display-3 text-1000 fw-normal">Let's make a tour</h1>
               <h1 class="display-3 text-primary fw-bold">Discover the beauty</h1>
               <div class="pt-5">
                 <nav>
