@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="{{ asset('front/assets/css/glightbox.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}">
         <!-- Select2 CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">        </head>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet"></head>
     <body>
        <!-- ========================= header start ========================= -->
        <header class="header navbar-area bg-white">
@@ -26,8 +26,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/img/logo/logo-ticketing.svg" alt="Logo">
+                        <a class="navbar-brand" href="{{ route('index') }}">
+                            <img src="{{ asset('front/assets/img/logo/logo_new.svg') }}" alt="Logo">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -40,7 +40,7 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="page-scroll active" href="#home">Home</a>
+                                    <a class="page-scroll active" href="{{ route('index') }}">Home</a>
                                 </li>
                                 <!-- <li class="nav-item">
                                     <a class="page-scroll" href="#about">About</a>
@@ -49,10 +49,10 @@
                                     <a class="page-scroll" href="#alur-tiketing">Alur Tiketing</a>
                                 </li> -->
                                 <li class="nav-item">
-                                    <a class="page-scroll" href="faqs.html">FAQS</a>
+                                    <a class="page-scroll" href="{{ route('faqs') }}">FAQS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="page-scroll" href="contact.html">Contact</a>
+                                    <a class="page-scroll" href="{{ route('contact') }}">Contact</a>
                                 </li>
                             </ul>
                             <!-- <div class="header-btn">
@@ -178,14 +178,6 @@
                 <div class="button-container">
                     <button type="submit" class="btn btn-primary" id="swal-6">Kirim</button>
                 </div>
-                <!-- <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="mb-2">Success Message</div>
-                        <button class="btn btn-primary" id="toastr-2">Launch</button>
-                      </div>
-                    </div>
-                </div> -->
             </div>
         </div>
            
@@ -198,8 +190,8 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
-                                    <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
-                                    <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                                    <a href="{{ route('index') }}" class="logo mb-30"><img src="{{ asset('front/assets/img/logo-isi-black.svg') }}" alt="logo"></a>
+                                    <p class="mb-30 footer-desc">Institut Seni Indonesia Yogyakarta atau ISI Yogyakarta, berdiri sejak 23 Juli 1984, adalah Perguruan Tinggi Negeri Seni Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia dengan berbagai bidang seni terlengkap dan terbaik di Indonesia.</p>
                                     <div class="footer-social-links">
                                         <ul class="d-flex">
                                             <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
@@ -229,25 +221,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- <div class="col-xl-3 col-lg-3 col-md-6">
-                                <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
-                                    <h4>Service</h4>
-                                    <ul class="footer-links">
-                                        <li>
-                                            <a href="javascript:void(0)">Marketing</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Branding</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Web Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Graphics Design</a>
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </div> -->
                             <div class="col-xl-5 col-lg-6 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
                                     <h4>Contact</h4>
@@ -360,10 +333,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group d-flex flex-wrap justify-content-end">
-                                    <a href="forgetpassword.html" class="font-size-3 text-dodger line-height-reset">Forget Password</a>
+                                    <a href="{{ route('forgetpassword') }}" class="font-size-3 text-dodger line-height-reset">Lupa Kata Sandi</a>
                                 </div>
                                 <div class="form-group mb-8 button" >
-                                    <button class="btn btn-primary"> <a href="dashboard/home.html">Log in</a>
+                                    <button class="btn btn-primary"> <a href="{{ route('home') }}">Log in</a>
                                     </button>
                                 </div>
                                 <p class="text-center create-new-account">Belum memiliki Akun? <a href="#" data-toggle="modal" data-target="#signup" data-dismiss="modal">Sign Up</a></p>
@@ -399,24 +372,24 @@
                                     <input type="email" class="form-control" placeholder="example@gmail.com">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password" class="label">Password</label>
+                                    <label for="password" class="label">Kata Sandi</label>
                                     <div class="position-relative">
                                         <input type="password" class="form-control"
                                             placeholder="Enter password">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="password" class="label">Confirm Password</label>
+                                    <label for="password" class="label">Konfirmasi Kata Sandi</label>
                                     <div class="position-relative">
                                         <input type="password" class="form-control"
                                             placeholder="Enter password">
                                     </div>
                                 </div>
                                 <div class="form-group mb-8 button">
-                                    <button class="btn btn-primary"><a href="#" data-toggle="modal" data-target="#login" data-dismiss="modal">Sign Up</a>
+                                    <button class="btn btn-primary"><a href="#" data-toggle="modal" data-target="#login" data-dismiss="modal">Daftar</a>
                                     </button>
                                 </div>
-                                <p class="text-center create-new-account">Sudah memiliki Akun? <a href="#" data-toggle="modal" data-target="#login" data-dismiss="modal">Sign In</a></p>
+                                <p class="text-center create-new-account">Sudah memiliki Akun? <a href="#" data-toggle="modal" data-target="#login" data-dismiss="modal">Masuk</a></p>
                             </form>
                         </div>
                     </div>

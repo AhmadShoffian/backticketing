@@ -36,6 +36,9 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 // Route::get('/dashboard', [DashboardController::class, 'index'])
 //     ->middleware(['auth', 'verified'])
 //     ->name('dashboard');
+//Route::get('/dashboard', [DashboardController::class, 'index'])
+//   ->middleware(['auth', 'verified'])
+//    ->name('dashboard');
 
 
 Route::get('/logout', [AuthController::class, 'logout']);
