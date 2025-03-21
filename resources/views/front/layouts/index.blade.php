@@ -63,15 +63,15 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#about">About</a>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> 
+                                     <li class="nav-item">
                                         <a class="page-scroll" href="#alur-tiketing">Alur Tiketing</a>
-                                    </li>
+                                    </li> 
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#faqs">FAQS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="{{ route('contact') }}">Contact</a>
+                                        <a class="page-scroll" href="{{route('contact')}}">Contact</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->

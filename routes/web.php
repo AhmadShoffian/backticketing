@@ -23,7 +23,7 @@ use App\Http\Controllers\UnitkerjaController;
 // });
 
 // Route bagian kirim cepat
-Route::get('/', [FrontendController::class, 'index']);
+Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/kirimcepat', [FrontendController::class, 'kirimcepat'])->name('kirimcepat');
 Route::get('/input_form_kc', [FrontendController::class, 'input_form_kc'])->name('input_form_kc');
 Route::get('/detail_ticket_kc', [FrontendController::class, 'detail_ticket_kc'])->name('detail_ticket_kc');
