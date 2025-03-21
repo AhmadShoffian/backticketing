@@ -22,12 +22,25 @@ use App\Http\Controllers\UnitkerjaController;
 //     return view('welcome');
 // });
 
+// Route bagian kirim cepat
 Route::get('/', [FrontendController::class, 'index']);
-Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/kirimcepat', [FrontendController::class, 'kirimcepat'])->name('kirimcepat');
-Route::get('/faqs', [FrontendController::class, 'faqs'])->name('faqs');
+Route::get('/input_form_kc', [FrontendController::class, 'input_form_kc'])->name('input_form_kc');
 Route::get('/detail_ticket_kc', [FrontendController::class, 'detail_ticket_kc'])->name('detail_ticket_kc');
+Route::get('/forgetpassword', [FrontendController::class, 'forgetpassword'])->name('forgetpassword');
+Route::get('/faqs', [FrontendController::class, 'faqs'])->name('faqs');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 
+// Route bagian login
+Route::get('/home', [FrontendController::class, 'home'])->name('home');
+Route::get('/home/akun', [FrontendController::class, 'akun'])->name('home.akun');
+Route::get('/home/profile', [FrontendController::class, 'profile'])->name('home.profile');
+Route::get('/home/input_form', [FrontendController::class, 'input_form'])->name('home.input_form');
+Route::get('/home/data_ticket_login', [FrontendController::class, 'data_ticket_login'])->name('home.data_ticket_login');
+Route::get('/home/detail_ticket', [FrontendController::class, 'detail_ticket'])->name('home.detail_ticket');
+Route::get('/home/detail_ticket_closed', [FrontendController::class, 'detail_ticket_closed'])->name('home.detail_ticket_closed');
+Route::get('/home/faqs_login', [FrontendController::class, 'faqs_login'])->name('home.faqs_login');
+Route::get('/home/contact_login', [FrontendController::class, 'contact_login'])->name('home.contact_login');
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 

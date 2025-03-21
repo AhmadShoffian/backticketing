@@ -23,10 +23,6 @@
 
     </head>
     <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
         <!-- ========================= preloader start ========================= -->
             <div class="preloader">
                 <div class="loader">
@@ -53,7 +49,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="index.html">
-                                <img src="{{ asset('../front/assets/img/logo/logo-ticketing.svg') }}" alt="Logo">
+                                <img src="{{ asset('../front/assets/img/logo/logo-new.svg') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -81,9 +77,6 @@
                                         <a class="page-scroll" href="../contact_login.html">Contact</a>
                                     </li>
                                 </ul>
-                                <!-- <div class="header-btn">
-                                    <a href="javascript:void(0)" class="theme-btn">Get Started</a>
-                                </div> -->
 
                             </div> <!-- navbar collapse -->
                                 <!-- Notification -->
@@ -124,8 +117,8 @@
                                     <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="profile.html"><i class="lni lni-briefcase"></i>Profile</a>
-                                        <a class="dropdown-item" href="akun.html"><i class="lni lni-rocket"></i> Account</a>
+                                        <a class="dropdown-item" href="profile.html"><i class="lni lni-briefcase"></i>Profil</a>
+                                        <a class="dropdown-item" href="akun.html"><i class="lni lni-rocket"></i> Akun</a>
                                         <a class="dropdown-item logout-btn" id="logoutButton" href="#"><i class="lni lni-close"></i>Logout</a>
                                     </div>
                                     </li>
