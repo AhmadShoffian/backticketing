@@ -13,12 +13,17 @@
 		<!-- ========================= CSS here ========================= -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-		<link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
-        <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/tiny-slider.css">
-		<link rel="stylesheet" href="assets/css/glightbox.min.css">
-		<link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/LineIcons.2.0.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/animate.css') }}">
+        <script src="{{ asset('front/assets/js/bootstrap.bundle-5.0.0.alpha-min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/contact-form.js') }}"></script>
+        <script src="{{ asset('front/assets/js/count-up.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/tiny-slider.js') }}"></script>
+        <script src="{{ asset('front/assets/js/isotope.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/glightbox.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/wow.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/imagesloaded.min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/main.js') }}"></script>
     </head>
     <body>
 
@@ -30,7 +35,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="index.html">
-                                <img src="assets/img/logo/logo-ticketing.svg" alt="Logo">
+                                <img src="{{ asset('front/assets/img/logo/logo_new.svg') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -55,7 +60,7 @@
                                         <a class="page-scroll" href="#portfolio">FAQS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="contact_login.html">Contact</a>
+                                        <a class="page-scroll" href="{{ route('contact') }}">Contact</a>
                                     </li>
                                 </ul>
                                 <!-- <div class="header-btn">
@@ -102,8 +107,8 @@
                                     <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
-                                        <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
+                                        <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profil</a>
+                                        <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Akun</a>
                                         <a class="dropdown-item logout-btn" id="logoutButton" href="#"><i class="lni lni-close"></i>Logout</a>
                                     </div>
                                     </li>
@@ -251,7 +256,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
                             <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
-                            <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                            <p class="mb-30 footer-desc">Institut Seni Indonesia Yogyakarta atau ISI Yogyakarta, berdiri sejak 23 Juli 1984, adalah Perguruan Tinggi Negeri Seni Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia dengan berbagai bidang seni terlengkap dan terbaik di Indonesia.</p>
                             <div class="footer-social-links">
                                 <ul class="d-flex">
                                     <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>

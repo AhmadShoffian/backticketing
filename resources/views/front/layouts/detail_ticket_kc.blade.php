@@ -11,12 +11,12 @@
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- ========================= CSS here ========================= -->
-		<link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
-        <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/tiny-slider.css">
-		<link rel="stylesheet" href="assets/css/glightbox.min.css">
-		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap-5.0.0-alpha.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/LineIcons.2.0.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/animate.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/tiny-slider.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/glightbox.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}">
     </head>
     <body>
 
@@ -27,8 +27,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/img/logo/logo-ticketing.svg" alt="Logo">
+                            <a class="navbar-brand" href="{{ route('index') }}">
+                            <img src="{{ asset('front/assets/img/logo/logo_new.svg') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -41,7 +41,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="page-scroll active" href="index.html">Home</a>
+                                        <a class="page-scroll active" href="{{ route('index') }}">Home</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#about">About</a>
@@ -50,13 +50,13 @@
                                         <a class="page-scroll" href="#services">Alur ticketing</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="faqs.html">FAQS</a>
+                                        <a class="page-scroll" href="{{ route('faqs') }}">FAQS</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#team">Team</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="contact.html">Contact</a>
+                                        <a class="page-scroll" href="{{ route('contact') }}">Contact</a>
                                     </li>
                                 </ul>
                                 <!-- <div class="header-btn">
@@ -67,7 +67,7 @@
                              <div class="button">
                                 <a href="javacript:" data-toggle="modal" data-target="#login" class="login"><i
                                         class="lni lni-lock-alt"></i> Login</a>
-                                <a href="input_form_kc.html" class="btn">Kirim cepat</a>
+                                <a href="{{ route('input_form_kc') }}" class="btn">Kirim cepat</a>
                             </div>
                         </nav> <!-- navbar -->
                     </div>
@@ -128,8 +128,8 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
-                            <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
-                            <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                            <a href="{{ route('index') }}" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
+                            <p class="mb-30 footer-desc">Institut Seni Indonesia Yogyakarta atau ISI Yogyakarta, berdiri sejak 23 Juli 1984, adalah Perguruan Tinggi Negeri Seni Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia dengan berbagai bidang seni terlengkap dan terbaik di Indonesia.</p>
                         </div>
                     </div>
                     <div class="col-xl-3 offset-xl-1 col-lg-3 col-md-6">
@@ -223,15 +223,15 @@
         </a>
         
 		<!-- ========================= JS here ========================= -->
-		<script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
-		<script src="assets/js/contact-form.js"></script>
-        <script src="assets/js/count-up.min.js"></script>
-        <script src="assets/js/tiny-slider.js"></script>
-        <script src="assets/js/isotope.min.js"></script>
-        <script src="assets/js/glightbox.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/imagesloaded.min.js"></script>
-		<script src="assets/js/main.js"></script>
+		<script src="{{ asset('front/assets/js/bootstrap.bundle-5.0.0.alpha-min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/contact-form.js') }}"></script>
+        <script src="{{ asset('front/assets/js/count-up.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/tiny-slider.js') }}"></script>
+        <script src="{{ asset('front/assets/js/isotope.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/glightbox.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/wow.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/imagesloaded.min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/main.js') }}"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const logoutBtn = document.querySelector(".logout-btn");
@@ -279,7 +279,7 @@
                                 </div>
                             </div>
                             <div class="form-group d-flex flex-wrap justify-content-end">
-                                <a href="forgetpassword.html" class="font-size-3 text-dodger line-height-reset">Forget Password</a>
+                                <a href="forgetpassword.html" class="font-size-3 text-dodger line-height-reset">Lupa Password</a>
                             </div>
                             <div class="form-group mb-8 button" >
                                 <button class="btn btn-primary"> <a href="dashboard/home.html">Log in</a>
@@ -325,7 +325,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="password" class="label">Confirm Password</label>
+                                <label for="password" class="label">Konfirmasi Password</label>
                                 <div class="position-relative">
                                     <input type="password" class="form-control"
                                         placeholder="Enter password">

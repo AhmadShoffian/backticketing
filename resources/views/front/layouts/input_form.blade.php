@@ -11,12 +11,17 @@
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- ========================= CSS here ========================= -->
-		<link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
-        <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/tiny-slider.css">
-		<link rel="stylesheet" href="assets/css/glightbox.min.css">
-		<link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/LineIcons.2.0.css') }}">
+        <link rel="stylesheet" href="{{ asset('front/assets/css/animate.css') }}">
+        <script src="{{ asset('front/assets/js/bootstrap.bundle-5.0.0.alpha-min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/contact-form.js') }}"></script>
+        <script src="{{ asset('front/assets/js/count-up.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/tiny-slider.js') }}"></script>
+        <script src="{{ asset('front/assets/js/isotope.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/glightbox.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/wow.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/imagesloaded.min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/main.js') }}"></script>
         <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"> -->
     </head>
     <body>
@@ -26,8 +31,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/img/logo/logo-ticketing.svg" alt="Logo">
+                            <a class="navbar-brand" href="{{ route('index') }}">
+                                <img src="{{ asset('front/assets/img/logo/logo_new.svg') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -40,7 +45,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="page-scroll active" href="#home">Home</a>
+                                        <a class="page-scroll active" href="{{ route('home') }}">Home</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#about">About</a>
@@ -49,13 +54,13 @@
                                         <a class="page-scroll" href="#services">Alur ticketing</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="faqs_login.html">FAQS</a>
+                                        <a class="page-scroll" href="{{ route('home.faqs_login') }}">FAQS</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a class="page-scroll" href="#team">Team</a>
                                     </li> -->
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="contact_login.html">Contact</a>
+                                        <a class="page-scroll" href="{{ route('home.contact_login') }}">Contact</a>
                                     </li>
                                 </ul>
                                 <!-- <div class="header-btn">
@@ -98,10 +103,10 @@
                             <!-- button profile -->
                             <ul class="sign-in">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="dashboard/profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni lni-user"></i> My Account</a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="dashboard/profile.html"><i class="lni lni-briefcase"></i>Profile</a>
-                                        <a class="dropdown-item" href="dashboard/akun.html"><i class="lni lni-rocket"></i> Account</a>
+                                        <a class="dropdown-item" href="{{ route('home.profile') }}"><i class="lni lni-briefcase"></i>Profil</a>
+                                        <a class="dropdown-item" href="{{ route('home.akun') }}"><i class="lni lni-rocket"></i> Akun</a>
                                         <!-- <a class="dropdown-item" href="#"><i class="lni lni-close"></i>Logout</a> -->
                                         <a class="dropdown-item logout-btn" id="logoutButton" href="#"><i class="lni lni-close"></i>Logout</a>
                                     </div>
@@ -224,14 +229,6 @@
                 <div class="button-container">
                     <button type="submit" class="btn btn-primary" id="swal-2">Kirim</button>
                 </div>
-                <!-- <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="mb-2">Success Message</div>
-                        <button class="btn btn-primary" id="toastr-2">Launch</button>
-                      </div>
-                    </div>
-                </div> -->
             </div>
         </div>
            
@@ -244,8 +241,8 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
-                                    <a href="index.html" class="logo mb-30"><img src="assets/img/logo-isi-black.svg" alt="logo"></a>
-                                    <p class="mb-30 footer-desc">We Crafted an awesome desig library that is robust and intuitive to use. No matter you're building a business presentation websit.</p>
+                                    <a href="{{ route('index') }}" class="logo mb-30"><img src="{{ asset('front/assets/img/logo-isi-black.svg') }}" alt="logo"></a>
+                                    <p class="mb-30 footer-desc">Institut Seni Indonesia Yogyakarta atau ISI Yogyakarta, berdiri sejak 23 Juli 1984, adalah Perguruan Tinggi Negeri Seni Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia dengan berbagai bidang seni terlengkap dan terbaik di Indonesia.</p>
                                     <div class="footer-social-links">
                                         <ul class="d-flex">
                                             <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
@@ -275,25 +272,6 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- <div class="col-xl-3 col-lg-3 col-md-6">
-                                <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".6s">
-                                    <h4>Service</h4>
-                                    <ul class="footer-links">
-                                        <li>
-                                            <a href="javascript:void(0)">Marketing</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Branding</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Web Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Graphics Design</a>
-                                        </li> 
-                                    </ul>
-                                </div>
-                            </div> -->
                             <div class="col-xl-5 col-lg-6 col-md-6">
                                 <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
                                     <h4>Contact</h4>
@@ -327,17 +305,17 @@
                 </a>
                 
                 <!-- ========================= JS here ========================= -->
-                <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
-                <script src="assets/js/contact-form.js"></script>
-                <script src="assets/js/count-up.min.js"></script>
-                <script src="assets/js/tiny-slider.js"></script>
-                <script src="assets/js/isotope.min.js"></script>
-                <script src="assets/js/glightbox.min.js"></script>
-                <script src="assets/js/wow.min.js"></script>
-                <script src="assets/js/imagesloaded.min.js"></script>
-                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                <script src="assets/js/main.js"></script>
-                <script src="input_form.js"></script>
+                <link rel="stylesheet" href="{{ asset('front/assets/css/LineIcons.2.0.css') }}">
+                <link rel="stylesheet" href="{{ asset('front/assets/css/animate.css') }}">
+                <script src="{{ asset('front/assets/js/bootstrap.bundle-5.0.0.alpha-min.js') }}"></script>
+                <script src="{{ asset('front/assets/js/contact-form.js') }}"></script>
+                <script src="{{ asset('front/assets/js/count-up.min.js') }}"></script>
+                <script src="{{ asset('front/assets/js/tiny-slider.js') }}"></script>
+                <script src="{{ asset('front/assets/js/isotope.min.js') }}"></script>
+                <script src="{{ asset('front/assets/js/glightbox.min.js') }}"></script>
+                <script src="{{ asset('front/assets/js/wow.min.js') }}"></script>
+                <script src="{{ asset('front/assets/js/imagesloaded.min.js') }}"></script>
+                <script src="{{ asset('front/assets/js/main.js') }}"></script>
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <!-- <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script> -->
                 <script>
@@ -372,18 +350,6 @@
                         });
                     });
                 </script>
-                <!-- <script>
-                    $(document).ready(function() {
-                        $("#toastr-2").click(function() {
-                            console.log("Button clicked!"); // Debugging untuk memastikan event berjalan
-                            iziToast.success({
-                                title: 'Hello, world!',
-                                message: 'This awesome plugin is made by iziToast',
-                                position: 'topRight'
-                            });
-                        });
-                    });
-                </script> -->
 
                 <script>
                     document.getElementById("permohonanBtn").addEventListener("click", function(event) {
@@ -414,33 +380,20 @@
                    document.getElementById("swal-2").addEventListener("click", function() {
                         Swal.fire({
                             title: 'Data Berhasil Dikirim!',
-                            text: 'Silahkan klik tombol "OK"',
+                            text: 'Anda akan dialihkan dalam beberapa detik...',
                             icon: 'success',
-                            confirmButtonText: 'OK',
-                            confirmButtonColor: '#4CAF50',
+                            timer: 3000, // Alert akan hilang setelah 3 detik
+                            showConfirmButton: false, // Menghilangkan tombol "OK"
                             allowOutsideClick: false,
                             allowEscapeKey: false,
                             allowEnterKey: false,
-                            showCloseButton: false,
-                            showCancelButton: false,
-                            showDenyButton: false,
-                            showConfirmButton: true,
-                            showLoaderOnConfirm: true,
-                            preConfirm: () => {
-                                return new Promise((resolve) => {
-                                    setTimeout(() => {
-                                        resolve();
-                                    }, 2000);
-                                });
-                            }
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                // alert("Redirecting to detail_ticket.html");
-                                window.location.href = "data_ticket_login.html";
-                            }
-                            
+                            timerProgressBar: true // Menampilkan progress bar waktu
                         });
-
+                
+                        // Redirect setelah alert menghilang
+                        setTimeout(() => {
+                            window.location.href = "data_ticket_login.html";
+                        }, 3000); // Waktu harus sama dengan `timer` di atas
                     });
                </script>
                <script>
